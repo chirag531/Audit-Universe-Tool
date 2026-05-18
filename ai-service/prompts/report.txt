@@ -1,0 +1,1 @@
+Generate a short report with findings and next actions.

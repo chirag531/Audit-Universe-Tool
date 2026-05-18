@@ -1,0 +1,32 @@
+server:
+  port: ${BACKEND_PORT:8080}
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/tool123}
+    username: ${SPRING_DATASOURCE_USERNAME:tool123_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:tool123_pass}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:localhost}
+      port: ${SPRING_DATA_REDIS_PORT:6379}
+  cache:
+    type: redis
+app:
+  jwt:
+    secret: ${APP_JWT_SECRET:replace_with_long_random_secret_at_least_32_chars}
+    expiration-ms: ${APP_JWT_EXPIRATION_MS:3600000}
+  ai:
+    base-url: ${APP_AI_BASE_URL:http://localhost:5000}
+    api-key: ${APP_AI_API_KEY:replace_with_random_api_key}
+  reports:
+    email-to: ${APP_REPORT_EMAIL_TO:admin@example.com}
+    cron: ${APP_REPORT_CRON:0 0 9 * * *}

@@ -1,0 +1,15 @@
+# Runtime
+.env
+*.log
+
+# Backend
+backend/target/
+
+# Frontend generated artifacts
+frontend/node_modules/
+frontend/dist/
+
+# Python
+ai-service/.pytest_cache/
+ai-service/__pycache__/
+ai-service/*.pyc
