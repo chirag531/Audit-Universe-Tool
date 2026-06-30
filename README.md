@@ -1,4 +1,4 @@
-# Tool-123 Audit Universe
+# Audit Universe
 [!image alt](https://github.com/chirag531/Audit-Universe-Tool/blob/main/home.jpeg)
 This repository contains a production-oriented full stack implementation:
 - Backend: Spring Boot 3 + Java 17 with JWT, refresh tokens, RBAC, Flyway migrations, OpenAPI bearer auth.
